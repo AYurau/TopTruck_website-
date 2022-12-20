@@ -1,0 +1,123 @@
+#slider {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+}
+.slides_wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1.4vh;
+	width: 100%;
+}
+.overflow {
+    position: relative;
+    overflow: hidden;
+    width: 60vw;
+    height: 70vh;
+	background-color: blue;
+	margin: auto;
+}
+.control {
+	display: none;
+}
+.slides {
+    position: absolute;
+    display: flex;
+    width: 500%;
+    height: 100%;
+	transition: all ease-in-out 1s;
+}
+.slides > * {
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.slides > *:nth-child(1) {
+	background-image: url(../img/template_4.png);
+}
+.slides > *:nth-child(2) {
+	background-image: url(../img/template_2.png);
+}
+.slides > *:nth-child(3) {
+	background-image: url(../img/template_3.jpg);
+}
+.slides > *:nth-child(4) {
+	background-image: url(../img/template_1.jpg);
+}
+.slides > *:nth-child(5) {
+	background-image: url(../img/template_5.jpg);
+}
+
+#slide_1_control:checked ~ .overflow > .slides {
+	left: 0%;
+}
+#slide_2_control:checked ~ .overflow > .slides {
+	left: -100%;
+}
+#slide_3_control:checked ~ .overflow > .slides {
+	left: -200%;
+}
+#slide_4_control:checked ~ .overflow > .slides {
+	left: -300%;
+}
+#slide_5_control:checked ~ .overflow > .slides {
+	left: -400%;
+}
+
+#slide_1_control:checked ~ .controls_wrapper > label:nth-child(1) {
+	background-color: red;
+}
+#slide_2_control:checked ~ .controls_wrapper > label:nth-child(2) {
+	background-color: red;
+}
+#slide_3_control:checked ~ .controls_wrapper > label:nth-child(3) {
+	background-color: red;
+}
+#slide_4_control:checked ~ .controls_wrapper > label:nth-child(4) {
+	background-color: red;
+}
+#slide_5_control:checked ~ .controls_wrapper > label:nth-child(5) {
+	background-color: red;
+}
+
+.controls_wrapper {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+.controls_wrapper > label {
+	cursor: pointer;
+	display: block;
+	width: 50px;
+	height: 1vh;
+	background-color: rgb(211, 211, 211);
+	transition: all ease-in-out 0.2s;
+}
+.controls_wrapper > label:hover {
+	background-color: rgb(255, 111, 111);
+}
+
+/* offer */
+
+.offer_view #slider {
+	height: 100%;
+	width: 50%;
+}
+.offer_view .controls_wrapper > label {
+	width: 3vw;
+	height: 1vh;
+}
+.offer_view .overflow {
+	width: 100%;
+	height: 50vh;
+}
+
+
+@media (max-width: 800px) {
+    .overflow {
+        width: 80vw;
+    }
+}

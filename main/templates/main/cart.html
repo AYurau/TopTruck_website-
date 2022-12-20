@@ -1,0 +1,76 @@
+ {% extends 'base.html' %}
+ {% load static %}
+
+ {% block title %}
+ Cart
+ {% endblock title %}
+
+ {% block container %}
+        <main id="cart_page" class="page">
+            <a href="cart.html" class="cart_button">
+                <div class="cart">
+                    <p>0</p>
+                </div>
+            </a>
+            <section id="sales_section">
+                <div class="dark_blackout common_padding_under_header">
+                    <h2>Cart</h2>
+                    <div class="marketplace">
+                        <div class="cart_item" id="cart_item_1">
+                            <div>
+                                <div class="cart_item_img"></div>
+                                <div>
+                                    <h3>BV206-1</h3>
+                                    <p>Short cart item description. Some information about this item for example</p>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <h5>Price:</h5>
+                                <h5>114599$</h5>
+                            </div>
+                            <div>
+                                <input type="number" class="item_counter" placeholder="x1">
+                                <div class="item_controls">
+                                    <button class="substract">-</button>
+                                    <button class="add">+</button>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="cart_item" id="cart_item_2">
+                            <div>
+                                <div class="cart_item_img"></div>
+                                <div>
+                                    <h3>BV206-1 Engine</h3>
+                                    <p>Short cart item description. Some information about this item for example</p>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <h5>Price:</h5>
+                                <h5>8499$</h5>
+                            </div>
+                            <div>
+                                <input type="number" class="item_counter" placeholder="x1">
+                                <div class="item_controls">
+                                    <button class="substract">-</button>
+                                    <button class="add">+</button>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="pay_wrapper">
+                            <div class="price">
+                                <h5>Total:</h5>
+                                <h5>128499$</h5>
+                            </div>
+                            <div class="offer_button">Order</div>
+                        </div>
+                        <form action class="order-form">
+                            <input type="text" placeholder="Your Name">
+                            <input type="tel" placeholder="Your telephone number">
+                            <input type="email" placeholder="Your Email">
+                            <button class="offer_button">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+{% endblock container %}

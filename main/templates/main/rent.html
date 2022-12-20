@@ -1,0 +1,52 @@
+ {% extends 'base.html' %}
+ {% load static %}
+
+ {% block title %}
+ Rent
+ {% endblock title %}
+
+{% block container %}
+        <main id="rent_page" class="page">
+            <a href="cart.html" class="cart_button">
+                <div class="cart">
+                    <p>0</p>
+                </div>
+            </a>
+            <section id="rent_section">
+                <div class="dark_blackout common_padding_under_header">
+                    <h2>Our offers // <span>Rent</span></h2>
+                     <div class="marketplace">
+                         <div class="offer" id="offer_1">
+                            <a href="offer.html" class="ad_picture"></a>
+                            <div class="ad_block">
+                                <h3>BV206</h3>
+                                <div class="peculiarities_list">
+                                    <div>
+                                        <img src="{% static '/img/check_mark_icon_red.png' %}">
+                                        <p>Load capacity 2.5 tons</p>
+                                    </div>
+                                    <div>
+                                        <img src="{% static 'img/check_mark_icon_red.png' %}">
+                                        <p>Frost&impact-resistant fiberglass</p>
+                                    </div>
+                                    <div>
+                                        <img src="{% static 'img/check_mark_icon_red.png' %}">
+                                        <p>Accommodates 17 people</p>
+                                    </div>
+                                    <div>
+                                        <img src="{% static 'img/check_mark_icon_red.png' %}">
+                                        <p>Works at temperatures from -55 to +55</p>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <h5>Price:</h5>
+                                    <h5>100 999$</h5>
+                                </div>
+                                <a href="offer.html" class="offer_button">More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+ {% endblock container %}

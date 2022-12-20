@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block title %}
+ Home
+ {% endblock title %}
+
+ {% block container %}
+        <main>
+            <a href="cart.html" class="cart_button">
+                <div class="cart">
+                    <p>0</p>
+                </div>
+            </a>
+            <section id="section_0" class="section_0">
+                <div class="blackout common_padding_under_header">
+                    <div>
+                        <div>
+                            <img class="logo" src="static/img/logo_2.png" alt="logo">
+                        </div>
+                        <div class="vertical_line"></div>
+                        <div>
+                            <h1>bv206 - the best solution for off-road</h1>
+                            <p>Tracked all-terrain vehicle BV-206 is ideal for places with a complete lack of roads. It is simple, reliable, unpretentious and functional. In terms of performance characteristics, perhaps the best in its class.</p>
+                            <a href="#section_1" class="more_button">
+                                <span>More</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section_1" class="section_1">
+                <div class="dark_blackout common_padding">
+                    <h2>About Us</h2>
+                    <hr>
+                    <p>Top Truck is a worldwide trader of used trucks, tractors, trailers and special vehicles, specialized in Volvo, Scania, fridge trailers Chereau, all-terrain tracked vehicles Hägglund BV206, spare parts for BV206. We are reliable, deliver quickly and offer a very wide selection. Handling shipment, transport, customs procedures and any possible adjustment are no problem for us. Our office is just a five-minute drive from Landvetter Airport in Gothenburg, Sweden.</p>
+                    <p id="slider_p">Do you need a truck or trailer? Browse our stock list, find yourselves appropriate object and contact us for further information. If we don't have the vehicle You need, we´ll found it for You! Hagglunds BV206 all-terrain vehicles are used in forestry, transmission line work, crew transport and tourism, pipeline construction and maintenance, construction work on remote sites, forest firefighting, rescue and relief work.</p>
+                    <div id="slider">
+                        <div class="slides_wrapper">
+                            <input type="radio" class="control" id="slide_1_control" name="controls" checked>
+                            <input type="radio" class="control" id="slide_2_control" name="controls">
+                            <input type="radio" class="control" id="slide_3_control" name="controls">
+                            <input type="radio" class="control" id="slide_4_control" name="controls">
+                            <input type="radio" class="control" id="slide_5_control" name="controls">
+                            <div class="overflow">
+                                <article class="slides" id="slides">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </article>
+                            </div>
+                            <div class="controls_wrapper">
+                                <label for="slide_1_control"></label>
+                                <label for="slide_2_control"></label>
+                                <label for="slide_3_control"></label>
+                                <label for="slide_4_control"></label>
+                                <label for="slide_5_control"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section_2" class="section_2 common_padding">
+                <h2>Testimonials</h2>
+                <hr>
+                <div class="testimonials">
+                    <div>
+                        <img class="avatar" src="static/img/avatar_1.png" alt="ava">
+                        <h3>Evan A.</h3>
+                        <img class="stars" src="static/img/stars.png" alt="stars">
+                        <p>Great company. We have been working together for many years and have never let us down!</p>
+                    </div>
+                    <div>
+                        <img class="avatar" src="static/img/avatar_2.png" alt="ava">
+                        <h3>Alex S.</h3>
+                        <img class="stars" src="static/img/stars.png" alt="stars">
+                        <p>Good! I was satisfied with the cooperation with Top Truck. My order was processed very quickly, the price is equal to the quality.</p>
+                    </div>
+                    <div>
+                        <img class="avatar" src="static/img/avatar_3.png" alt="ava">
+                        <h3>Vadim Zh.</h3>
+                        <img class="stars" src="static/img/stars.png" alt="stars">
+                        <p>Top Truck workers are professionals in their field! Helped with selection and all items were delivered on time. Thank you!</p>
+                    </div>
+                </div>
+            </section>
+            <section id="section_3" class="section_3 common_padding">
+                <h2>What do we offer you</h2>
+                <hr>
+                <div>
+                    <div class="video_div">
+                        <video width="640" autoplay loop muted>
+                            <source src="{% static '/videos/hmart.mp4' %}">
+
+                        </video>
+                    </div>
+                    <div class="peculiarities_list">
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Load capacity 2.5 tons</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Frost&impact-resistant fiberglass</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Accommodates 17 people</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Works at temperatures from -55 to +55</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Able to swim fully loaded</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Extra-wide rubber-metal tracks</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Ground pressure is only 0.07 KPa/cm2</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Overcomes slopes up to 55 degrees</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Side roll 45 degrees</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Steering wheel and automatic transmission</p>
+                        </div>
+                        <div>
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>Speed up to 50km/h</p>
+                        </div>
+                        <div class="last_point">
+                            <img src="static/img/check_mark_icon.png" alt="phone_icon">
+                            <p>The best solution on the market</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section_4" class="section_4 common_padding">
+                <h2>Where are hagglunds bv-206 in demand?</h2>
+                <hr>
+                <p>Hagglunds is in demand from both private owners and organizations. Travelers, hunters and fishermen have found in it an indispensable assistant, providing confident movement on almost any terrain, and even forcing water bodies. Good capacity came in handy for corporate operators. The oil and gas sectors, signalmen, the Ministry of Emergency Situations, law enforcement agencies - all such organizations have always had a need for a small, but roomy and economical, truly all-terrain vehicle. A simple, functional design allows you to use the "moose" as a chassis for various types of special equipment.</p>
+                <div class="statistics">
+                    <div>
+                        <div class="count">
+                            <div class="count-content">
+                                <h4>10</h4>
+                                <h4>9</h4>
+                                <h4>7</h4>
+                                <h4>5</h4>
+                                <h4>3</h4>
+                                <h4>2</h4>
+                                <h4>1</h4>
+                            </div>
+                        </div>
+                        <p>years on the market</p>
+                    </div>
+                    <div>
+                        <div class="count">
+                            <div class="count-content">
+                                <h4>319</h4>
+                                <h4>315</h4>
+                                <h4>290</h4>
+                                <h4>243</h4>
+                                <h4>188</h4>
+                                <h4>140</h4>
+                                <h4>98</h4>
+                            </div>
+                        </div>
+                        <p>satisfied customers</p>
+                    </div>
+                    <div>
+                        <div class="count">
+                            <div class="count-content">
+                                <h4>319</h4>
+                                <h4>315</h4>
+                                <h4>290</h4>
+                                <h4>243</h4>
+                                <h4>188</h4>
+                                <h4>140</h4>
+                                <h4>98</h4>
+                            </div>
+                        </div>
+                        <p>successful projects</p>
+                    </div>
+                    <div>
+                        <div class="count">
+                            <div class="count-content">
+                                <h4>319</h4>
+                                <h4>315</h4>
+                                <h4>290</h4>
+                                <h4>243</h4>
+                                <h4>188</h4>
+                                <h4>140</h4>
+                                <h4>98</h4>
+                            </div>
+                        </div>
+                        <p>positive reviews about us</p>
+                    </div>
+                    <div>
+                        <div class="count">
+                            <div class="count-content">
+                                <h4>319</h4>
+                                <h4>315</h4>
+                                <h4>290</h4>
+                                <h4>243</h4>
+                                <h4>188</h4>
+                                <h4>140</h4>
+                                <h4>98</h4>
+                            </div>
+                        </div>
+                        <p>years product warranty</p>
+                    </div>
+                </div>
+            </section>
+            <section id="section_5" class="section_5 common_padding">
+                <h2>Why you should choose us?</h2>
+                <hr>
+                <p> We are constantly working on expanding the range of components offered for delivery.
+                    The BV-206 has virtually no parts and components that we could not supply to you.
+                    Our experience and knowledge of technology allow you to do without a long search for the name of the part or its number - it is enough to describe its appearance and installation location.
+                    In the vast majority of cases, this is sufficient for correct identification and quality delivery.</p>
+                <div class="sec_5_img"></div>
+            </section>
+
+            <section id="section_6" class="section_6">
+                <div class="dark_blackout common_padding">
+                    <h2>Connect with us</h2>
+                    <form action="">
+                        <div class="emails">
+                            <div class="from">
+                                <label for="from">From</label>
+                                <input id="from_input" type="email" name="from" placeholder="Your email...">
+                            </div>
+                            <div class="to">
+                                <label for="to">To</label>
+                                <input id="to_input" type="email" name="to" placeholder="Recipient's email...">
+                            </div>                    
+                        </div>
+                        <div class="message">
+                            <label for="message">Message</label>
+                            <textarea id="message_input" placeholder="Your message..." name="message"></textarea>
+                            <input class="submit_button" type="button" name="submit" id="submit_button" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section id="section_7" class="section_7 common_padding">
+                <div>
+                    <div class="contacts">
+                        <h2>Contacts</h2>
+                        <hr>
+                        <div>
+                            <img src="static/img/phone_icon_black.png" alt="phone_icon">
+                            <a href="">+46 70 731 39 45</a>
+                        </div>
+                        <div>
+                            <img src="static/img/phone_icon_black.png" alt="phone_icon">
+                            <a href="">+37 06 465 61 74</a>
+                        </div>
+                        <div>
+                            <img src="static/img/mail_black.png" alt="mail">
+                            <a href="">michael@toptruck.se</a>
+                        </div>
+                        <div>
+                            <img src="static/img/mail_black.png" alt="mail">
+                            <a href="">michael@toptruck.se</a>
+                        </div>
+                        <div>
+                            <img src="static/img/earth_icon.png" alt="earth">
+                            <a href="">Shweden, Prästgårdsvägen 40</a>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1066.6070898304993!2d12.206632428428621!3d57.67883914871876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ffa0f83343977%3A0x3d3aee2ab46f36ca!2sTop%20Truck%20AB!5e0!3m2!1sru!2sby!4v1663234221697!5m2!1sru!2sby" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>                
+                </div>
+            </section>
+        </main>
+ {% endblock container %}

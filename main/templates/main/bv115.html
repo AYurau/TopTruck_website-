@@ -1,0 +1,37 @@
+ {% extends 'base.html' %}
+ {% load static %}
+
+ {% block title %}
+ BV115
+ {% endblock title %}
+
+{% block container %}
+        <main id="bv115_page" class="page">
+            <a href="cart.html" class="cart_button">
+                <div class="cart">
+                    <p>0</p>
+                </div>
+            </a>
+            <section id="sales_section">
+                <div class="dark_blackout bv115_content common_padding_under_header">
+                    <h2>BV-115</h2>
+                    <hr>
+                    <p>The all-terrain vehicle BV-206 "Moose" is a two-section tracked amphibious all-terrain vehicle with unique technical characteristics. The all-terrain vehicle "Los" provides the minimum specific pressure on the ground - 2-3 times lower than that of a person. In contrast to other manufacturers who indicate the specific pressure of an empty machine, we bring to your attention the value at maximum weight. The amphibious snow and swamp vehicle BV-206 "Moose" is probably the only tracked all-terrain vehicle capable of moving across the tundra without damaging its delicate vegetation cover.</p>
+                    <div class="bv115_images_wrapper">
+                        <div class="bv115_images">
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <p>Ultra-wide rubber-metal caterpillars not only do not damage the cover, but also allow you to move on any ground without falling through. Deep snow, sand, swamp - the all-terrain vehicle Elk feels confident everywhere.</p>
+                    <p>The all-terrain vehicle "Moose" in its class has a unique ratio of its own weight to the mass of the transported cargo, which allows you to mount engines in the all-terrain vehicle with less power than other all-terrain vehicles, without losing the carrying capacity, speed and other technical characteristics of the swamp. Accordingly, the fuel consumption of the all-terrain vehicle Elk (BV206) is much less than that of competitors. At the same time, the value of the specific engine power is the highest in its class.</p>
+                    <div class="video_div">
+                        <video autoplay loop muted>
+                            <source src="{% static '/videos/hmart.mp4' %}">
+                        </video>
+                    </div>
+                </div>
+            </section>
+        </main>
+{% endblock container %}
