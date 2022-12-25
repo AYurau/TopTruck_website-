@@ -5,3 +5,6 @@ from main.models import CategorySale, ForSale
 
 admin.site.register(CategorySale)
 admin.site.register(ForSale)
+
+
+

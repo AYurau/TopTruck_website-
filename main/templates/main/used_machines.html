@@ -12,43 +12,47 @@
                     <p>0</p>
                 </div>
             </a>
-            <section id="sales_section">
+
+              <section id="sales_section">
                 <div class="dark_blackout common_padding_under_header">
                     <h2>Our offers // <span>Used machines</span></h2>
                     <div class="marketplace">
-                        <div class="offer" id="offer_1">
-                            <a href="offer.html" class="ad_picture"></a>
+                        {% for machines in used_machines_models %}
+                        <div class="offer" id='offer_1'>
+                            <a href="offer.html"><img class="ad_picture" src={{machines.cover}}></a>
                             <div class="ad_block">
-                                <h3>BV206</h3>
+                                <h3>{{machines.title}}</h3>
                                 <div class="peculiarities_list">
+                                    {% for key,value in machine_options.items %}
+                                    {% if key == machines.title %}
+                                    {% for option in value %}
                                     <div>
                                         <img src="{% static '/img/check_mark_icon_red.png' %}">
-                                        <p>Load capacity 2.5 tons</p>
+                                        <p>{{option}}</p>
+
                                     </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}">
-                                        <p>Frost&impact-resistant fiberglass</p>
-                                    </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}">
-                                        <p>Accommodates 17 people</p>
-                                    </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}">
-                                        <p>Works at temperatures from -55 to +55</p>
-                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% endfor %}
                                 </div>
                                 <div class="price">
                                     <h5>Price:</h5>
-                                    <h5>100 999$</h5>
+                                    <h5>{{machines.price}}$</h5>
+
                                 </div>
+
                                 <a href="offer.html" class="offer_button">More</a>
+
                             </div>
                         </div>
-
-
+                        {% endfor %}
                     </div>
                 </div>
             </section>
+
+
         </main>
+
+
+
  {% endblock container %}
