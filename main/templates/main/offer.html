@@ -14,13 +14,13 @@
             </a>
             <section id="sales_section">
                 <div class="dark_blackout common_padding_under_header">
-                    <h2>BV-206</h2>
+                    <h2>{{obj.title}}</h2>
                     <div class="marketplace">
                         <div class="offer_view">
                             <div class="slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <div class="slide slide1"></div>
+                                        <div class="slide slide1"><img class="offer_picture" src={{obj.cover}}></div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="slide slide2"></div>
@@ -40,51 +40,30 @@
                             <div class="offer_block">
                                 <div class="peculiarities_list">
                                     <h3>Parameters</h3>
+
+                                    {% for key,value in machine_options.items %}
+                                    {% for option in value %}
                                     <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}" >
-                                        <p>Load capacity 2.5 tons</p>
+                                        <img src="{% static '/img/check_mark_icon_red.png' %}">
+                                        <p>{{option}}</p>
+
                                     </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}" >
-                                        <p>Frost&impact-resistant fiberglass</p>
-                                    </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}" >
-                                        <p>Accommodates 17 people</p>
-                                    </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}" >
-                                        <p>Works at temperatures from -55 to +55</p>
-                                    </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}" >
-                                        <p>Able to swim fully loaded</p>
-                                    </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}" >
-                                        <p>Extra-wide rubber-metal tracks</p>
-                                    </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}" >
-                                        <p>Ground pressure is only 0.07 KPa/cm2</p>
-                                    </div>
-                                    <div>
-                                        <img src="{% static 'img/check_mark_icon_red.png' %}" >
-                                        <p>Overcomes slopes up to 55 degrees</p>
-                                    </div>
+                                    {% endfor %}
+                                    {% endfor %}
+
                                 </div>
                                 <div class="price_buy">
                                     <div class="price">
                                         <h5>Price:</h5>
-                                        <h5>4899$</h5>
+                                        <h5>{{obj.price}}$</h5>
                                     </div>
-                                    <button class="add_to_cart">Add to cart</button>
+                                    <button class="add_to_cart" onclick={%  %}>Add to cart</button>
                                 </div>
                             </div>
                         </div>
                         <div class="offer_description">
                             <h3>Description</h3>
-                            <p>The all-terrain vehicle BV-206 "Moose" is a two-section tracked amphibious all-terrain vehicle with unique technical characteristics. The all-terrain vehicle "Los" provides the minimum specific pressure on the ground - 2-3 times lower than that of a person. In contrast to other manufacturers who indicate the specific pressure of an empty machine, we bring to your attention the value at maximum weight. The amphibious snow and swamp vehicle BV-206 "Moose" is probably the only tracked all-terrain vehicle capable of moving across the tundra without damaging its delicate vegetation cover.</p>
+                            <p>{{obj.description}}</p>
                         </div>
                     </div>
                 </div>

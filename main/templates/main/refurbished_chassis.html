@@ -15,10 +15,10 @@
 
               <section id="sales_section">
                 <div class="dark_blackout common_padding_under_header">
-                    <h2>Our offers // <span>Used machines</span></h2>
+                    <h2>Our offers // <span>Refurbished chassis</span></h2>
                     <div class="marketplace">
                         {% for machines in used_machines_models %}
-                            {% if machines.category.id == 1 %}
+                            {% if machines.category.id == 2 %}
                         <div class="offer" id={{machines.title}}>
                             <a href="{% url 'card' machines.id %}"><img class="ad_picture" src={{machines.cover}}></a>
                             <div class="ad_block">
