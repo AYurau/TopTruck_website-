@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 from main.models import ForSale
+from cart.forms import CartAddProductForm
 
 
 def index(request):
@@ -61,7 +62,7 @@ def bv115(request):
 
 
 def cart(request):
-    return render(request, 'main/cart.html')
+    return render(request, 'cart/detail.html')
 
 
 def offer(request, card_id):
@@ -88,3 +89,13 @@ def spare(request):
 
 def rent(request):
     return render(request, 'main/rent.html')
+
+
+def product_detail(request, id, slug):
+    product = get_object_or_404(ForSale,
+                                id=id,
+                                slug=slug,
+                                available=True)
+    cart_product_form = CartAddProductForm()
+    return render(request, 'cart/detail.html', {'product': product,
+                                                        'cart_product_form': cart_product_form})
