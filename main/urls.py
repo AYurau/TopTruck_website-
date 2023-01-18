@@ -11,7 +11,11 @@ urlpatterns = [
     path('cart.html', views.cart),
     path('offer_<int:card_id>.html', views.offer, name='card'),
     path('options.html', views.options),
-    path('spare.html', views.spare),
+    path('Engine_Transmitions.html', views.spare),
     path('refurbished_chassis.html', views.ref),
-    path('fullref.html', views.fullref)
+    path('fullref.html', views.fullref),
+    path('passenger_cabin.html',views.passenger_cabine),
+    path('with_board.html', views.with_board),
+    path('with_board_crane.html',views.with_board_and_crane),
+    path('Engine_Transmitions.html',views.engine_transmition)
 ]

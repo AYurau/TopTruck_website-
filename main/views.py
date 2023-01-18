@@ -1,12 +1,75 @@
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
-from main.models import ForSale
+from main.models import ForSale, Details
 from cart.forms import CartAddProductForm
 
 
 def index(request):
     return render(request, 'main/home.html')
+
+
+def passenger_cabine(request):
+    machine_options = {}
+    used_machines_models = ForSale.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/passenger_cabin.html', {'used_machines_models': used_machines_models,
+                                                             'machine_options': machine_options})
+
+
+def with_board(request):
+    machine_options = {}
+    used_machines_models = ForSale.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/with_board.html', {'used_machines_models': used_machines_models,
+                                                        'machine_options': machine_options})
+
+
+def engine_transmition(request):
+    machine_options = {}
+    used_machines_models = Details.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/Engine_Transmitions.html', {'used_machines_models': used_machines_models,
+                                                              'machine_options': machine_options})
+
+def with_board_and_crane(request):
+    machine_options = {}
+    used_machines_models = ForSale.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/with_board_crane.html', {'used_machines_models': used_machines_models,
+                                                              'machine_options': machine_options})
 
 
 def fullref(request):
@@ -75,8 +138,8 @@ def offer(request, card_id):
         machin_options_lst.append(opt)
     else:
         machine_options[obj.title] = machin_options_lst
-    return render(request, 'main/offer.html',{'obj':obj,
-                                              'machine_options':machine_options})
+    return render(request, 'main/offer.html', {'obj': obj,
+                                               'machine_options': machine_options})
 
 
 def options(request):
@@ -84,7 +147,7 @@ def options(request):
 
 
 def spare(request):
-    return render(request, 'main/spare.html')
+    return render(request, 'main/Engine_Transmitions.html')
 
 
 def rent(request):
@@ -98,4 +161,4 @@ def product_detail(request, id, slug):
                                 available=True)
     cart_product_form = CartAddProductForm()
     return render(request, 'cart/detail.html', {'product': product,
-                                                        'cart_product_form': cart_product_form})
+                                                'cart_product_form': cart_product_form})

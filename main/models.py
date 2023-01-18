@@ -5,7 +5,6 @@ from django.db import models
 class CategorySale(models.Model):
     name = models.CharField(max_length=64, verbose_name='Category')
 
-
     class Meta:
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
@@ -25,6 +24,33 @@ class ForSale(models.Model):
     class Meta:
         verbose_name = 'Machine'
         verbose_name_plural = 'Machines'
+
+    def __str__(self):
+        return self.title
+
+
+class DetailCategory(models.Model):
+    name = models.CharField(max_length=64, verbose_name='CategoryDetail')
+
+    class Meta:
+        verbose_name = 'Category Detail'
+        verbose_name_plural = 'Detail Categories'
+
+    def __str__(self):
+        return self.name
+
+
+class Details(models.Model):
+    title = models.CharField(max_length=255, verbose_name='Title')
+    category = models.ForeignKey(DetailCategory, on_delete=models.CASCADE, verbose_name='Category')
+    description = models.CharField(max_length=255, verbose_name='Description')
+    options = models.CharField(max_length=255, verbose_name='Options')
+    price = models.FloatField(verbose_name='Цена')
+    cover = models.ImageField(upload_to='static/img/')
+
+    class Meta:
+        verbose_name = 'Spare'
+        verbose_name_plural = 'Spares'
 
     def __str__(self):
         return self.title

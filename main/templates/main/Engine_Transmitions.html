@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+ {% load static %}
+
+ {% block title %}
+ Spare
+ {% endblock title %}
+
+{% block container %}
+        <main id="spare_page" class="page">
+            <a href="cart.html" class="cart_button">
+                <div class="cart">
+                    <p>0</p>
+                </div>
+            </a>
+            <section id="sales_section">
+                <div class="dark_blackout common_padding_under_header">
+                    <h2>Our offers // <span>Engine & Transmission</span></h2>
+                    <div class="marketplace">
+                        {% for machines in used_machines_models %}
+                            {% if machines.category.id == 1 %}
+                        <div class="offer" id={{machines.title}}>
+                            <a href="{% url 'card' machines.id %}"><img class="ad_picture" src={{machines.cover}}></a>
+                            <div class="ad_block">
+                                <h3>{{machines.title}}</h3>
+                                <p>{{machines.description}}</p>
+                                <div class="spare_flex">
+                                    <div class="price">
+                                        <h5>Price:</h5>
+                                        <h5>{{machines.price}}</h5>
+                                    </div>
+                                    <a href="offer.html" class="offer_button">Buy</a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+ {% endblock container %}
