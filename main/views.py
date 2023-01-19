@@ -54,7 +54,104 @@ def engine_transmition(request):
             machine_options[machines.title] = machin_options_lst
     else:
         return render(request, 'main/Engine_Transmitions.html', {'used_machines_models': used_machines_models,
+                                                                 'machine_options': machine_options})
+
+
+def brake(request):
+    machine_options = {}
+    used_machines_models = Details.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/brake.html', {'used_machines_models': used_machines_models,
+                                                   'machine_options': machine_options})
+
+
+def body(request):
+    machine_options = {}
+    used_machines_models = Details.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/body.html', {'used_machines_models': used_machines_models,
+                                                  'machine_options': machine_options})
+
+
+def chassis(request):
+    machine_options = {}
+    used_machines_models = Details.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/chassis.html', {'used_machines_models': used_machines_models,
+                                                     'machine_options': machine_options})
+
+
+def electrical(request):
+    machine_options = {}
+    used_machines_models = Details.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/electrical.html', {'used_machines_models': used_machines_models,
                                                               'machine_options': machine_options})
+
+
+def steering(request):
+    machine_options = {}
+    used_machines_models = Details.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/steering.html', {'used_machines_models': used_machines_models,
+                                                              'machine_options': machine_options})
+
+
+def other(request):
+    machine_options = {}
+    used_machines_models = Details.objects.all()
+    for machines in used_machines_models:
+        machin_options_str = machines.options
+        machin_options_lst = []
+        for i in machin_options_str.split(','):
+            opt = i.strip().capitalize()
+            machin_options_lst.append(opt)
+        else:
+            machine_options[machines.title] = machin_options_lst
+    else:
+        return render(request, 'main/other.html', {'used_machines_models': used_machines_models,
+                                                              'machine_options': machine_options})
+
 
 def with_board_and_crane(request):
     machine_options = {}
