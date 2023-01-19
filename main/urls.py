@@ -22,5 +22,6 @@ urlpatterns = [
     path('chassis.html',views.chassis),
     path('electrical.html', views.electrical),
     path('steering.html',views.steering),
-    path('other.html',views.other)
+    path('other.html',views.other),
+    path('spare_<int:spare_id>.html', views.spare, name='sp_card')
 ]

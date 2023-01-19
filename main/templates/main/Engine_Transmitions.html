@@ -19,7 +19,7 @@
                         {% for machines in used_machines_models %}
                             {% if machines.category.id == 1 %}
                         <div class="offer" id={{machines.title}}>
-                            <a href="{% url 'card' machines.id %}"><img class="ad_picture" src={{machines.cover}}></a>
+                            <a href="{% url 'sp_card' machines.id %}"><img class="ad_picture" src={{machines.cover}}></a>
                             <div class="ad_block">
                                 <h3>{{machines.title}}</h3>
                                 <p>{{machines.description}}</p>
@@ -28,7 +28,7 @@
                                         <h5>Price:</h5>
                                         <h5>{{machines.price}}</h5>
                                     </div>
-                                    <a href="offer.html" class="offer_button">Buy</a>
+                                    <a href="{% url 'sp_card' machines.id %}" class="offer_button">Buy</a>
                                 </div>
                             {% endif %}
                         {% endfor %}

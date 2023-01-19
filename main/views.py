@@ -239,12 +239,22 @@ def offer(request, card_id):
                                                'machine_options': machine_options})
 
 
+def spare(request, spare_id):
+    obj = Details.objects.get(pk=spare_id)
+    machine_options = {}
+    machin_options_str = obj.options
+    machin_options_lst = []
+    for i in machin_options_str.split(','):
+        opt = i.strip().capitalize()
+        machin_options_lst.append(opt)
+    else:
+        machine_options[obj.title] = machin_options_lst
+    return render(request, 'main/spare.html', {'obj': obj,
+                                               'machine_options': machine_options})
+
+
 def options(request):
     return render(request, 'main/options.html')
-
-
-def spare(request):
-    return render(request, 'main/Engine_Transmitions.html')
 
 
 def rent(request):
